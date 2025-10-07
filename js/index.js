@@ -28,9 +28,9 @@ function skiftKlasse(element, nyKlasse) {
   }
 }
 
-// Test Task 3
-const liToUpdate = document.getElementById("2"); // Beer
-skiftKlasse(liToUpdate, "healthy");             // Skifter class til "healthy"
+// // Test Task 3
+// const liToUpdate = document.getElementById("2"); // Beer
+// skiftKlasse(liToUpdate, "healthy");             // Skifter class til "healthy"
 
 //Task 4: Funktion til at slette et <li>-element
 function sletLi(element) {
@@ -65,3 +65,20 @@ function tælLiElementer(listeId) {
 // Test Task 6
 const antal = tælLiElementer("listUnhealthy");
 console.log("Antal li-elementer i listUnhealthy:", antal);
+
+
+// Task 7: Funktion til at flytte et <li>-element fra en liste til en anden
+function flytUnhealthy() {
+  const alleLi = document.querySelectorAll("#list li");
+  const målListe = document.getElementById("listUnhealthy");
+
+  alleLi.forEach(function(li) {
+    if (li.classList.contains("unhealthy")) {
+      målListe.appendChild(li);
+    }
+  });
+}
+
+
+// Test Task 7
+flytUnhealthy(); // Flytter alle "unhealthy" elementer til den anden liste
