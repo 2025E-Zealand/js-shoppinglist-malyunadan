@@ -50,6 +50,7 @@ function skiftTekst(element, nyTekst) {
   }
 }
 
+// Test Task 5
 const liToChange = document.getElementById("1"); // fx <li id="1" class="healthy">Cashew nuts</li>
 skiftTekst(liToChange, "Mandler");              // Skifter teksten til "Mandler"
 
