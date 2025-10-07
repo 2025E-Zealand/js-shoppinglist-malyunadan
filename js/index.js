@@ -53,3 +53,15 @@ function skiftTekst(element, nyTekst) {
 const liToChange = document.getElementById("1"); // fx <li id="1" class="healthy">Cashew nuts</li>
 skiftTekst(liToChange, "Mandler");              // Skifter teksten til "Mandler"
 
+// Task 6: Tæl antal <li>-elementer i en liste
+function tælLiElementer(listeId) {
+  const liste = document.getElementById(listeId);
+  if (liste) {
+    return liste.getElementsByTagName("li").length;
+  }
+  return 0;
+}
+
+// Test Task 6
+const antal = tælLiElementer("listUnhealthy");
+console.log("Antal li-elementer i listUnhealthy:", antal);
