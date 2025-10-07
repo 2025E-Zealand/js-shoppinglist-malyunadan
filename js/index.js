@@ -1,6 +1,6 @@
 //Write your Javascript code here
 console.log("Shoppinglist")
-// Funktion til at oprette et nyt <li>-element
+// Task 1: Funktion til at oprette et nyt <li>-element
 function lavLi(klasse, id, tekst) {
   const li = document.createElement("li");              // Opretter <li>
   li.setAttribute("class", klasse);                     // Tilføjer class
@@ -9,8 +9,20 @@ function lavLi(klasse, id, tekst) {
   li.appendChild(tekstNode);                            // Tilføjer tekst til <li>
   return li;                                            // Returnerer <li>
 }
+//Task 2: Funktion til at tilføje <li> til en liste
+function tilføjTilListe(listeId, liElement) {
+  const liste = document.getElementById(listeId);       // Finder listen via id
+  if (liste && liElement) {
+    liste.appendChild(liElement);                       // Tilføjer <li> til listen
+  }
+}
 
-// Tilføjer et nyt element til listen
-const liste = document.getElementById("listUnhealthy");
-const nyUgesynd = lavLi("Unhealthy", "5", "Chips");
-liste.appendChild(nyUgesynd);
+// 🧪 Test begge funktioner
+const nyUgesynd = lavLi("unhealthy", "5", "Chips");     // Opretter nyt <li>
+tilføjTilListe("listUnhealthy", nyUgesynd);             // Tilføjer det til listen
+
+
+// // Tilføjer et nyt element til listen
+// const liste = document.getElementById("listUnhealthy");
+// const nyUgesynd = lavLi("Unhealthy", "5", "Chips");
+// liste.appendChild(nyUgesynd);
