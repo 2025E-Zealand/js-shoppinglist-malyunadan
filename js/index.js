@@ -16,10 +16,21 @@ function tilføjTilListe(listeId, liElement) {
     liste.appendChild(liElement);                       // Tilføjer <li> til listen
   }
 }
-
-// 🧪 Test begge funktioner
+// Test begge funktioner
 const nyUgesynd = lavLi("unhealthy", "5", "Chips");     // Opretter nyt <li>
 tilføjTilListe("listUnhealthy", nyUgesynd);             // Tilføjer det til listen
+
+
+// ✅ Task 3: Skift eller tilføj class-attribut
+function skiftKlasse(element, nyKlasse) {
+  if (element) {
+    element.setAttribute("class", nyKlasse);
+  }
+}
+
+// 🧪 Test Task 3
+const liToUpdate = document.getElementById("2"); // Beer
+skiftKlasse(liToUpdate, "healthy");             // Skifter class til "healthy"
 
 
 // // Tilføjer et nyt element til listen
