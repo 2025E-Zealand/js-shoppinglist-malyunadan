@@ -12,5 +12,5 @@ function lavLi(klasse, id, tekst) {
 
 // Tilføjer et nyt element til listen
 const liste = document.getElementById("listUnhealthy");
-const nyUgesynd = lavLi("unhealthy", "5", "Chips");
+const nyUgesynd = lavLi("Unhealthy", "5", "Chips");
 liste.appendChild(nyUgesynd);
