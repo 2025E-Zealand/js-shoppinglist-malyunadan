@@ -21,19 +21,25 @@ const nyUgesynd = lavLi("unhealthy", "5", "Chips");     // Opretter nyt <li>
 tilføjTilListe("listUnhealthy", nyUgesynd);             // Tilføjer det til listen
 
 
-// ✅ Task 3: Skift eller tilføj class-attribut
+// Task 3: Skift eller tilføj class-attribut
 function skiftKlasse(element, nyKlasse) {
   if (element) {
     element.setAttribute("class", nyKlasse);
   }
 }
 
-// 🧪 Test Task 3
+// Test Task 3
 const liToUpdate = document.getElementById("2"); // Beer
 skiftKlasse(liToUpdate, "healthy");             // Skifter class til "healthy"
 
+//Task 4: Funktion til at slette et <li>-element
+function sletLi(element) {
+  if (element && element.parentNode) {
+    element.parentNode.removeChild(element); // Fjerner <li> fra listen
+  }
+}
 
-// // Tilføjer et nyt element til listen
-// const liste = document.getElementById("listUnhealthy");
-// const nyUgesynd = lavLi("Unhealthy", "5", "Chips");
-// liste.appendChild(nyUgesynd);
+// Test Task 4
+const liToDelete = document.getElementById("3"); // fx <li id="3" class="healthy">Apples</li>
+sletLi(liToDelete);                              // Sletter Apples fra listen
+
