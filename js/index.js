@@ -43,3 +43,13 @@ function sletLi(element) {
 const liToDelete = document.getElementById("3"); // fx <li id="3" class="healthy">Apples</li>
 sletLi(liToDelete);                              // Sletter Apples fra listen
 
+// Task 5: funktion skift tekst i et li element
+function skiftTekst(element, nyTekst) {
+  if (element) {
+    element.textContent = nyTekst; // Skifter teksten i <li>
+  }
+}
+
+const liToChange = document.getElementById("1"); // fx <li id="1" class="healthy">Cashew nuts</li>
+skiftTekst(liToChange, "Mandler");              // Skifter teksten til "Mandler"
+
